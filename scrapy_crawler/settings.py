@@ -23,12 +23,14 @@ USER_AGENT='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 8
-
+CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS_PER_DOMAIN = 32
+AUTOTHROTTLE_ENABLED = False
+DOWNLOAD_TIMEOUT = 600
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY =   0.5 #3
+DOWNLOAD_DELAY =   1 #3
 DOWNLOAD_TIMEOUT = 180
 
 
