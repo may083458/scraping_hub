@@ -31,7 +31,7 @@ DOWNLOAD_TIMEOUT = 600
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY =   1 #3
-DOWNLOAD_TIMEOUT = 180
+
 
 
 # The download delay setting will honor only one of:
