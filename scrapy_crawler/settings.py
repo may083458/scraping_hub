@@ -13,7 +13,7 @@ BOT_NAME = 'scrapy_crawler'
 
 SPIDER_MODULES = ['scrapy_crawler.spiders']
 NEWSPIDER_MODULE = 'scrapy_crawler.spiders'
-allowed_domains = 'ucon.umax.co.jp'
+ALLOWED_DOMAINS = 'ucon.umax.co.jp'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
