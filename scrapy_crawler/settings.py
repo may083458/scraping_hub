@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for quotes_crawler project
+# Scrapy settings for scrapy_crawler project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,29 +9,27 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'quotes_crawler'
+BOT_NAME = 'scrapy_crawler'
 
-SPIDER_MODULES = ['quotes_crawler.spiders']
-NEWSPIDER_MODULE = 'quotes_crawler.spiders'
-allowed_domains = 'ucon.umax.co.jp'
+SPIDER_MODULES = ['scrapy_crawler.spiders']
+NEWSPIDER_MODULE = 'scrapy_crawler.spiders'
 
-ITEM_PIPELINES ={'quotes_crawler.pipelines.ExportPipeline' : 100}
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'quotes_crawler (+http://www.yourdomain.com)'
+#USER_AGENT = 'scrapy_crawler (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True 
 
-
+ROBOTSTXT_OBEY = True
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 2
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY =   3 #3
-DOWNLOAD_TIMEOUT  = 1
-#DOWNLOAD_MAXSIZE =0
+DOWNLOAD_DELAY =   1.5 #3
+DOWNLOAD_TIMEOUT = 1
+
 
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 2
@@ -45,8 +43,8 @@ DOWNLOAD_TIMEOUT  = 1
 
 # Override the default request headers:
 #DEFAULT_REQUEST_HEADERS = {
- #  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  # 'Accept-Language': 'en',
+#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#   'Accept-Language': 'en',
 #}
 
 # Enable or disable spider middlewares
@@ -70,19 +68,19 @@ DOWNLOAD_TIMEOUT  = 1
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
- #  'quotes_crawler.pipelines.QuotesCrawlerPipeline': 100,
+#    'quotes_crawler.pipelines.QuotesCrawlerPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-AUTOTHROTTLE_START_DELAY = 5
+#AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
-AUTOTHROTTLE_MAX_DELAY = 60
+#AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
+#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
 # Enable showing throttling stats for every response received:
 AUTOTHROTTLE_DEBUG = True
 
